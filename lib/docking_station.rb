@@ -1,5 +1,9 @@
 class DockingStation
   docking_station = DockingStation.new
-  docking_station.release_bike
 
+  def release_bike
+
+  end
+
+  docking_station.release_bike
 end
