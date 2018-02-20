@@ -2,6 +2,7 @@
 require_relative "../lib/docking_station.rb"
 
 describe DockingStation do
-  expect DockingStation.respond_to(release_bike)
-
-end
+  it 'responds to release_bike' do
+    expect(subject).to respond_to :release_bike
+    end
+  end

@@ -5,5 +5,5 @@ class DockingStation
 
   end
 
-  docking_station.release_bike
+  # docking_station.release_bike
 end
