@@ -9,4 +9,7 @@ describe DockingStation do
   it 'respond to docking?' do
     expect(docking_station).to respond_to :docking?
   end
+  it 'respond to bike_docked?' do
+    expect(docking_station).to respond_to :bike_docked?
+  end
 end

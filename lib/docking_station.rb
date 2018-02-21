@@ -8,5 +8,7 @@ class DockingStation
   def docking?
 
   end
+  def bike_docked?
+  end
   # docking_station.release_bike
 end
