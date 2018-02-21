@@ -8,7 +8,15 @@ end
 class DockingStation
   attr_reader :bike
   def release_bike
-    Bike.new
+    if @bike == nil
+      raise_exception
+    else
+      Bike.new
+    end
+  end
+
+  def raise_exception
+    raise Exception.new ("Sorry, no bikes available")
   end
 
   def dock?(bike)

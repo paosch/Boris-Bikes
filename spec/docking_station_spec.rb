@@ -7,7 +7,9 @@ describe DockingStation do
     expect(docking_station).to respond_to :release_bike
     end
   it 'respond to dock?' do
-    expect((docking_station).dock?("bike")).to eq "bike" 
+    expect((docking_station).dock?("bike")).to eq "bike"
   end
-
+  it 'raise error message if no bike' do
+    expect {docking_station.release_bike}.to raise_error("Sorry, no bikes available")
+  end
 end
