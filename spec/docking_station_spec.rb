@@ -10,6 +10,8 @@ describe DockingStation do
     it 'raise error message if no bike' do
       expect {docking_station.release_bike}.to raise_error("Sorry, no bikes available")
     end
+end
+
   describe "dock?" do
     it 'respond to dock?' do
       expect((docking_station).dock?("bike")).to eq "bike"
