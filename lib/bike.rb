@@ -1,6 +1,7 @@
 class Bike
-  bike = Bike.new
+  
   def working?
+    true
   end
-  bike.working?
+
 end
