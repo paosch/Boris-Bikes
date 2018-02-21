@@ -11,11 +11,15 @@ class DockingStation
     if @bike == nil
       raise Exception.new ("Sorry, no bikes available")
     else
-      Bike.new
+      @bike
     end
   end
 
   def dock?(bike)
-    @bike = bike
+    if @bike == bike
+      raise "Sorry, dock occupied."
+    else
+      bike
+    end
   end
 end
