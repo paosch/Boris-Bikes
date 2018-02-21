@@ -1,14 +1,17 @@
-require './lib/bike.rb'
-class DockingStation
-  docking_station = DockingStation.new
+class Bike
+  def working?
+    true
+  end
+end
 
+
+class DockingStation
+  attr_reader :bike
   def release_bike
     Bike.new
   end
-  def docking?
 
+  def dock?(bike)
+    @bike = bike
   end
-  def bike_docked?
-  end
-  # docking_station.release_bike
 end
