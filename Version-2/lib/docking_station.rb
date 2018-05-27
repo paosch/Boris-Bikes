@@ -8,11 +8,12 @@ class DockingStation
     @capacity = capacity
   end
   def release_bike
-    fail 'Sorry, no bikes available' if empty?
+    raise 'Sorry, no bikes available' if empty?
+    raise 'Sorry, this bike is broken' if @bikes.last.broken?
     @bikes.pop
   end
   def dock(bike)
-    fail 'You cannot dock a bike, the docking station is full' if full?
+    raise 'You cannot dock a bike, the docking station is full' if full?
     @bikes.push(bike)
   end
 
