@@ -20,12 +20,21 @@ RSpec.describe DockingStation do
       subject.release_bike
       expect(bike).to be_working
     end
+    it "it doesn't release a bike if it's broken" do
+      bike = Bike.new
+
+      subject.dock(bike)
+      bike.report_broken
+      expect { subject.release_bike }.to raise_error 'Sorry, this bike is broken'
+
+    end
     it 'releases docked bikes' do
       bike = Bike.new
       subject.dock(bike)
       expect(subject.release_bike).to eq(bike)
     end
     it 'raises error when no bikes available' do
+      @bikes = []
       expect { subject.release_bike }.to raise_error 'Sorry, no bikes available'
     end
   end
