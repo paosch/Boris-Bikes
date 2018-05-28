@@ -2,7 +2,8 @@
 
 This is a program that emulates the Boris Bikes scheme in London.
 
-The first version was written in February 2018 during week 1 of the Makers Academy course. The second version was written in May 2018 to improve the code (refactoring, single responsibility principle, guard conditions) and to practise git flow (branching, pull requests, merging).
+The first version was written in February 2018 during week 1 of the Makers Academy course. The second version was written in May 2018 to improve the code (refactoring, single responsibility principle, test doubles, guard conditions) and to practise git flow (branching, pull requests, merging).
+
 
 ## User stories
 ```
@@ -52,9 +53,10 @@ I'd like docking stations to accept returning bikes (broken or not).
 
 ```
 
+
 ## The process
 
-- transforming a user story into a domain model
+- from user stories to domain model
 - using the domain model to feature-test a feature
 - writing a unit test
 - implementing code to pass the test
@@ -64,4 +66,11 @@ I'd like docking stations to accept returning bikes (broken or not).
 ## Testing framework and coverage
 RSpec
 
-(final screenshot goes here)
+(![screen shot 2018-05-28 at 11 54 42](https://user-images.githubusercontent.com/33669463/40611370-f6cab5f6-626d-11e8-9c32-5abb0239c6ca.png)
+
+
+## IRB screenshot
+
+![screen shot 2018-05-28 at 11 51 54](https://user-images.githubusercontent.com/33669463/40611348-dcfc1638-626d-11e8-9aca-a8b16e8f4236.png)
+
+
