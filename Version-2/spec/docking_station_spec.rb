@@ -15,18 +15,15 @@ RSpec.describe DockingStation do
       expect(subject.release_bike).to eq bike
     end
     it 'releases working bikes' do
-      bike = Bike.new
-      subject.dock(bike)
-      subject.release_bike
-      expect(bike).to be_working
+      bike = double(:bike, broken?: false)
+      subject.dock bike
+      expect(subject.release_bike).to be bike
     end
-    it "it doesn't release a bike if it's broken" do
-      bike = Bike.new
-
+    it "it doesn't release broken bikes" do
+      bike = double(:bike)
+      allow(bike).to receive(:broken?).and_return(true)
       subject.dock(bike)
-      bike.report_broken
       expect { subject.release_bike }.to raise_error 'Sorry, this bike is broken'
-
     end
     it 'releases docked bikes' do
       bike = Bike.new
@@ -45,8 +42,8 @@ RSpec.describe DockingStation do
       expect(subject.dock(bike)).to eq [bike]
     end
     it 'raises error when docking station full' do
-      subject.capacity.times { subject.dock(Bike.new) }
-      expect { subject.dock(Bike.new) }.to raise_error 'You cannot dock a bike, the docking station is full'
+      subject.capacity.times { subject.dock double :bike }
+      expect { subject.dock double (:bike) }.to raise_error 'You cannot dock a bike, the docking station is full'
     end
   end
 
