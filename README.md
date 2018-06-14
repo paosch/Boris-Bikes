@@ -2,7 +2,9 @@
 
 This is a program that emulates the Boris Bikes scheme in London.
 
-The first version was written in February 2018 during week 1 of the Makers Academy course. The second version was written in May 2018 to improve the code (refactoring, single responsibility principle, test doubles, guard conditions) and to practise git flow (branching, pull requests, merging).
+The first version was written in February 2018 during week 1 of the Makers Academy course. The second version was written in May 2018 to improve the code (refactoring, single responsibility principle, test doubles, guard conditions) and to practise git flow (branching, pull requests, merging). 
+
+The following information applies to the second version:
 
 
 ## User stories
