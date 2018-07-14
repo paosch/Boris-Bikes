@@ -1,9 +1,12 @@
-# Boris Bikes #
+# Boris Bikes 
+[![Build Status](https://travis-ci.com/paosch/Boris-Bikes.svg?branch=master)](https://travis-ci.com/paosch/Boris-Bikes)
 
 This is a program that emulates the Boris Bikes scheme in London.
 
-The first version was written in February 2018 during week 1 of the Makers Academy course. The second version was written in May 2018 to improve the code (refactoring, single responsibility principle, test doubles, guard conditions) and to practise git flow (branching, pull requests, merging). 
+Version 1 was written in February 2018 during week 1 of the Makers Academy course. 
 
+Version 2 was written in May 2018 to improve the code (refactoring, single responsibility principle, test doubles, guard conditions) and to practise git flow (branching, pull requests, merging). 
+<br></br>
 The following information applies to the second version:
 
 
@@ -60,7 +63,7 @@ I'd like docking stations to accept returning bikes (broken or not).
 
 - from user stories to domain model
 - using the domain model to feature-test a feature
-- writing a unit test
+- writing a unit test and watching it fail
 - implementing code to pass the test
 - refactoring
 
